@@ -138,10 +138,10 @@ class Simulation():
                     self.canvas.move(self.particle_handles[j], change_in_pos[0, j], change_in_pos[1, j])
 
             # TODO: resolve whether any particles hit the wall and reflect them
-            self.resolve_wall_collisions()
+            # self.resolve_wall_collisions()
 
             # TODO: resolve any particle collisions and transfer momentum
-            self.resolve_particle_collisions()
+            # self.resolve_particle_collisions()
 
             if self.visualise:
                 # update visualization with a delay
