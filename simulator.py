@@ -33,13 +33,13 @@ class Simulation():
 
         # TODO: initialise the positions of particles in the box
         # -- YOUR CODE HERE --
-        x, y = np.zeros_like(N), np.zeros_like(N)
-        self.pos = [x, y]
+        x, y = np.zeros(N), np.zeros(N)
+        self.pos = np.transpose([x, y])
         # --------------------
 
         # TODO: initialise the velocities of the particles (based on `E` and `masses`)
         # -- YOUR CODE HERE --
-        vx, vy = np.ones_like(N), np.ones_like(N)
+        vx, vy = np.ones(N), np.ones(N)
         self.vel = np.transpose([vx, vy])
         # --------------------
 
@@ -130,12 +130,14 @@ class Simulation():
         time = 0
         while time < seconds:
             # TODO: update all particle positions based on current speeds
-            change_in_pos = None            # -- YOUR CODE HERE
+            # -- YOUR CODE HERE --
+            change_in_pos = np.zeros_like(self.pos)
+            # --------------------
             self.pos += change_in_pos
 
             if self.visualise:
                 for j in range(self.N):
-                    self.canvas.move(self.particle_handles[j], change_in_pos[0, j], change_in_pos[1, j])
+                    self.canvas.move(self.particle_handles[j], change_in_pos[j, 0], change_in_pos[j, 1])
 
             # TODO: resolve whether any particles hit the wall and reflect them
             # self.resolve_wall_collisions()
