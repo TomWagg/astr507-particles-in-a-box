@@ -123,7 +123,7 @@ class Simulation():
         Parameters
         ----------
         seconds : `int`, optional
-            How many seconds to evolve for (ignored if `run_until_steady_state=True`), by default 1000
+            How many seconds to evolve for, by default 1000
         """
         # TODO: you may want to experiment with different timesteps or even ~adaptive~ timesteps
         dt = 1
