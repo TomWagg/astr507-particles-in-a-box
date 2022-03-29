@@ -104,14 +104,14 @@ class Simulation():
 
         self.particle_handles[pid] = self.canvas.create_oval(x0, y0, x1, y1, fill=fill, outline=outline)
 
-    def resolve_particle_collisions(self):
-        """ Resolve all particles collisions during this timestep """
+    def resolve_wall_collisions(self):
+        """Reverse the direction of any particles that hit walls"""
         # -- YOUR CODE HERE --
         # --------------------
         raise NotImplementedError
 
-    def resolve_wall_collisions(self):
-        """Reverse the direction of any particles that hit walls"""
+    def resolve_particle_collisions(self):
+        """ Resolve all particles collisions during this timestep """
         # -- YOUR CODE HERE --
         # --------------------
         raise NotImplementedError

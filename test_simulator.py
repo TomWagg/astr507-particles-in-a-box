@@ -9,7 +9,7 @@
 import simulator
 
 # you probably want the size to be at least 750 as this is in pixels for the visualisation
-size = 1000
+size = 750
 
 # change these to valid values (it will crash if you don't!)
 E = None
