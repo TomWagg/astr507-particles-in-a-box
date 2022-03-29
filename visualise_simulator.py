@@ -1,5 +1,5 @@
 """
-    test_simulator.py
+    visualise_simulator.py
     =================
 
     Use this file to test your simulator by visualising the results and making sure everything looks okay.
